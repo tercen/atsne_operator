@@ -48,7 +48,7 @@ do.tsne = function(data, max_iter=1000, dims=2, exaggeration_iter=250, perplexit
 (ctx = tercenCtx())  %>% 
   select(.ci, .ri, .y) %>% 
   reshape2::acast(.ri ~ .ci, value.var='.y', fun.aggregate=mean) %>%
-  do.tsne(max_iter = as.integer(ctx$op.value('dims')),
+  do.tsne(max_iter = as.integer(ctx$op.value('max_iter')),
           exaggeration_iter  = as.integer(ctx$op.value('exaggeration_iter')),
           dims = as.integer(ctx$op.value('dims')),
           perplexity = as.integer(ctx$op.value('perplexity')),
