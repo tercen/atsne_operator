@@ -29,6 +29,11 @@
     "name": "perplexity",
     "defaultValue": 30,
     "description": "Perplexity parameter"
+  },{
+    "kind": "DoubleProperty",
+    "name": "fill",
+    "defaultValue": 0.0,
+    "description": "Missing value"
   }
   ]
 }
