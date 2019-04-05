@@ -1,6 +1,6 @@
-library(tercen)
-library(dplyr)
-
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(tercen))
+  
 do.tsne = function(data, max_iter=1000, dims=2, exaggeration_iter=250, perplexity=30, theta=0.5){
   filename = tempfile()
   out.filename = tempfile()
@@ -47,7 +47,9 @@ do.tsne = function(data, max_iter=1000, dims=2, exaggeration_iter=250, perplexit
  
 (ctx = tercenCtx())  %>% 
   select(.ci, .ri, .y) %>% 
-  reshape2::acast(.ri ~ .ci, value.var='.y', fun.aggregate=mean, fill=as.double(ctx$op.value('fill'))) %>%
+  data.table::dcast(.ri ~ .ci, value.var='.y', fun.aggregate=mean, fill=as.double(ctx$op.value('fill'))) %>%
+  select(-.ri) %>%
+  as.matrix() %>%
   do.tsne(max_iter = as.integer(ctx$op.value('max_iter')),
           exaggeration_iter  = as.integer(ctx$op.value('exaggeration_iter')),
           dims = as.integer(ctx$op.value('dims')),
@@ -57,3 +59,16 @@ do.tsne = function(data, max_iter=1000, dims=2, exaggeration_iter=250, perplexit
   mutate(.ci = seq_len(nrow(.))-1) %>%
   ctx$addNamespace() %>%
   ctx$save()
+
+
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
