@@ -52,7 +52,7 @@ do.tsne = function(data, max_iter=1000, dims=2, exaggeration_iter=250, perplexit
           dims = as.integer(ctx$op.value('dims')),
           perplexity = as.integer(ctx$op.value('perplexity')),
           theta = as.double(ctx$op.value('theta')))%>% 
-  as_tibble() %>% 
+  as.data.frame() %>% 
   mutate(.ci = seq_len(nrow(.))-1) %>%
   ctx$addNamespace() %>%
   ctx$save()
