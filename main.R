@@ -46,10 +46,7 @@ do.tsne = function(data, max_iter=1000, dims=2, exaggeration_iter=250, perplexit
 }
  
 (ctx = tercenCtx())  %>% 
-  select(.ci, .ri, .y) %>% 
-  data.table::dcast(.ri ~ .ci, value.var='.y', fun.aggregate=mean, fill=as.double(ctx$op.value('fill'))) %>%
-  select(-.ri) %>%
-  as.matrix() %>%
+  as.matrix(fill=as.double(ctx$op.value('fill'))) %>% 
   do.tsne(max_iter = as.integer(ctx$op.value('max_iter')),
           exaggeration_iter  = as.integer(ctx$op.value('exaggeration_iter')),
           dims = as.integer(ctx$op.value('dims')),
