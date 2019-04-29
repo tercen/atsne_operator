@@ -4,7 +4,6 @@ suppressPackageStartupMessages(library(tercen))
 do.tsne = function(data, max_iter=1000, dims=2, exaggeration_iter=250, perplexity=30, theta=0.5){
   filename = tempfile()
   out.filename = tempfile()
-  
   on.exit({
     if (file.exists(filename)){
       file.remove(filename);
@@ -13,11 +12,9 @@ do.tsne = function(data, max_iter=1000, dims=2, exaggeration_iter=250, perplexit
       file.remove(out.filename);
     }
   })
-  
   write.filename = file(filename, "wb")
   writeBin(as.vector(data), write.filename, size=4)
   close(write.filename)
-  
   cmd = 'bin/atsne_cmd'
   args = paste('--iterations', max_iter, 
                   '--target_dimensions', dims,
@@ -29,27 +26,15 @@ do.tsne = function(data, max_iter=1000, dims=2, exaggeration_iter=250, perplexit
                   ncol(data),
                   nrow(data),
                   sep = ' ')
-   
   system2(cmd, args)
-  
   read.filename = file(out.filename, "rb")
-  
   tsne.data = readBin(read.filename, double(), size=4, n = 2*ncol(data))
-  
   close(read.filename)
-  
   tsne.matrix = matrix(tsne.data, nrow = ncol(data), ncol = 2, byrow = TRUE)
-  
   colnames(tsne.matrix) = c('tsne.1', 'tsne.2')
-  
   return(tsne.matrix)
 }
 
-logMe = function(object, msg) {
-  print(msg)
-  object
-}
- 
 (ctx = tercenCtx())  %>% 
   as.matrix(fill=as.double(ctx$op.value('fill'))) %>% 
   do.tsne(max_iter = as.integer(ctx$op.value('max_iter')),
@@ -57,16 +42,11 @@ logMe = function(object, msg) {
           dims = as.integer(ctx$op.value('dims')),
           perplexity = as.integer(ctx$op.value('perplexity')),
           theta = as.double(ctx$op.value('theta')))%>%
-  logMe("do.tsne") %>% 
   as.data.frame() %>% 
-  logMe("as.data.frame") %>% 
   mutate(.ci = seq_len(nrow(.))-1) %>%
-  logMe("mutate") %>% 
   ctx$addNamespace() %>%
-  logMe("addNamespace") %>% 
   ctx$save() 
 
-logMe(NULL, "done")
 
 
  
