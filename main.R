@@ -44,6 +44,11 @@ do.tsne = function(data, max_iter=1000, dims=2, exaggeration_iter=250, perplexit
   
   return(tsne.matrix)
 }
+
+logMe = function(object, msg) {
+  print(msg)
+  object
+}
  
 (ctx = tercenCtx())  %>% 
   as.matrix(fill=as.double(ctx$op.value('fill'))) %>% 
@@ -51,11 +56,17 @@ do.tsne = function(data, max_iter=1000, dims=2, exaggeration_iter=250, perplexit
           exaggeration_iter  = as.integer(ctx$op.value('exaggeration_iter')),
           dims = as.integer(ctx$op.value('dims')),
           perplexity = as.integer(ctx$op.value('perplexity')),
-          theta = as.double(ctx$op.value('theta')))%>% 
+          theta = as.double(ctx$op.value('theta')))%>%
+  logMe("do.tsne") %>% 
   as.data.frame() %>% 
+  logMe("as.data.frame") %>% 
   mutate(.ci = seq_len(nrow(.))-1) %>%
+  logMe("mutate") %>% 
   ctx$addNamespace() %>%
-  ctx$save()
+  logMe("addNamespace") %>% 
+  ctx$save() 
+
+logMe(NULL, "done")
 
 
  
