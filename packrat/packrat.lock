@@ -63,16 +63,16 @@ Hash: bdc4d48c3135e8f3b399536ddf160df4
 
 Package: mtercen
 Source: github
-Version: 1.0.4
-Hash: 8baa99041a14c9ee7508f50e1ef88980
+Version: 1.0.5
+Hash: f9a660a67e9392677d1df2a35d0d08ef
 GithubRepo: mtercen
 GithubUsername: tercen
-GithubRef: 1.0.4
-GithubSha1: 3b0ddcb3788a46b4dbc4ad5e131412b108318838
+GithubRef: 1.0.5
+GithubSha1: c7dd0c4c3a6d1bef1f1c4cd1724d3c647432b078
 RemoteHost: api.github.com
 RemoteRepo: mtercen
 RemoteUsername: tercen
-RemoteSha: 3b0ddcb3788a46b4dbc4ad5e131412b108318838
+RemoteSha: c7dd0c4c3a6d1bef1f1c4cd1724d3c647432b078
 
 Package: packrat
 Source: github
@@ -139,30 +139,30 @@ Requires: glue, magrittr, stringi
 
 Package: teRcenHttp
 Source: github
-Version: 1.0.4
-Hash: 2920cbdcc24596bb74f35b6ebe641a50
+Version: 1.0.5
+Hash: 7bcd1fa65975b700442b6735384a4cf6
 GithubRepo: teRcenHttp
 GithubUsername: tercen
-GithubRef: 1.0.4
-GithubSha1: 778c4ac995dd96c00a794d6f11263f6d9b19f053
+GithubRef: 1.0.5
+GithubSha1: cc083861d49cecf481242462a718ae293fc6ca14
 RemoteHost: api.github.com
 RemoteRepo: teRcenHttp
 RemoteUsername: tercen
-RemoteSha: 778c4ac995dd96c00a794d6f11263f6d9b19f053
+RemoteSha: cc083861d49cecf481242462a718ae293fc6ca14
 
 Package: tercen
 Source: github
-Version: 0.8.9
-Hash: 3a2d25c4744c6a03f89cea97de4b4061
+Version: 0.8.10
+Hash: a843513f3f94257693ebb59499405abd
 Requires: R6, dplyr, mtercen, teRcenHttp, tibble, yaml
 GithubRepo: teRcen
 GithubUsername: tercen
-GithubRef: 0.8.9
-GithubSha1: b792be65388ffcbf381b61f3c4949fc73845dcaf
+GithubRef: 0.8.10
+GithubSha1: 1220cdfffe8902579816a24c8320b2be33a3f11d
 RemoteHost: api.github.com
 RemoteRepo: teRcen
 RemoteUsername: tercen
-RemoteSha: b792be65388ffcbf381b61f3c4949fc73845dcaf
+RemoteSha: 1220cdfffe8902579816a24c8320b2be33a3f11d
 
 Package: tibble
 Source: CRAN
