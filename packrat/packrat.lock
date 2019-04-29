@@ -34,11 +34,6 @@ Source: CRAN
 Version: 1.3.4
 Hash: ff2840dd9b0d563fc80377a5a45510cd
 
-Package: data.table
-Source: CRAN
-Version: 1.12.0
-Hash: d382bb97e2d9dd05ad8070e41513dcb1
-
 Package: dplyr
 Source: CRAN
 Version: 0.8.0.1
@@ -69,10 +64,6 @@ GithubRepo: mtercen
 GithubUsername: tercen
 GithubRef: 1.0.5
 GithubSha1: c7dd0c4c3a6d1bef1f1c4cd1724d3c647432b078
-RemoteHost: api.github.com
-RemoteRepo: mtercen
-RemoteUsername: tercen
-RemoteSha: c7dd0c4c3a6d1bef1f1c4cd1724d3c647432b078
 
 Package: packrat
 Source: github
@@ -82,10 +73,6 @@ GithubRepo: packrat
 GithubUsername: rstudio
 GithubRef: v0.4.9-1
 GithubSha1: f98789177c02b3066144dfb8c39ea67d681fd73c
-RemoteHost: api.github.com
-RemoteRepo: packrat
-RemoteUsername: rstudio
-RemoteSha: f98789177c02b3066144dfb8c39ea67d681fd73c
 
 Package: pillar
 Source: CRAN
@@ -103,39 +90,16 @@ Source: CRAN
 Version: 0.2.0
 Hash: 81a8008a5e7858552503935f1abe48aa
 
-Package: plyr
-Source: CRAN
-Version: 1.8.4
-Hash: c1f16316c42e893217934b712b817593
-Requires: Rcpp
-
 Package: purrr
 Source: CRAN
 Version: 0.3.2
 Hash: d7bb7f62bb3af2d6510f50cb7190a060
 Requires: magrittr, rlang
 
-Package: reshape2
-Source: CRAN
-Version: 1.4.3
-Hash: 1331df4206d0207838eff5d4324f5919
-Requires: Rcpp, plyr, stringr
-
 Package: rlang
 Source: CRAN
 Version: 0.3.4
 Hash: 6a5220d1a973463418286038095d8c0b
-
-Package: stringi
-Source: CRAN
-Version: 1.2.4
-Hash: 03ab60ef7fa4627b38ad67c95ce6b04c
-
-Package: stringr
-Source: CRAN
-Version: 1.3.1
-Hash: 9f417a1d899ed1f080942ab36998e8b5
-Requires: glue, magrittr, stringi
 
 Package: teRcenHttp
 Source: github
@@ -145,10 +109,6 @@ GithubRepo: teRcenHttp
 GithubUsername: tercen
 GithubRef: 1.0.6
 GithubSha1: 94cc13e3d89e159d0a897c9a66fa38fc52136fb6
-RemoteHost: api.github.com
-RemoteRepo: teRcenHttp
-RemoteUsername: tercen
-RemoteSha: 94cc13e3d89e159d0a897c9a66fa38fc52136fb6
 
 Package: tercen
 Source: github
@@ -159,10 +119,6 @@ GithubRepo: teRcen
 GithubUsername: tercen
 GithubRef: 0.8.11
 GithubSha1: 7253ebd02ca36297b6e442f2315a301a11631b50
-RemoteHost: api.github.com
-RemoteRepo: teRcen
-RemoteUsername: tercen
-RemoteSha: 7253ebd02ca36297b6e442f2315a301a11631b50
 
 Package: tibble
 Source: CRAN
