@@ -58,16 +58,16 @@ Hash: bdc4d48c3135e8f3b399536ddf160df4
 
 Package: mtercen
 Source: github
-Version: 1.0.5
-Hash: f9a660a67e9392677d1df2a35d0d08ef
+Version: 1.0.6
+Hash: 00170b02542a5ce6c52a9344e3620afb
 GithubRepo: mtercen
 GithubUsername: tercen
-GithubRef: 1.0.5
-GithubSha1: c7dd0c4c3a6d1bef1f1c4cd1724d3c647432b078
+GithubRef: 1.0.6
+GithubSha1: a31ea3cd5cf902ed392e7d10aa07cabf2e952723
 RemoteHost: api.github.com
 RemoteRepo: mtercen
 RemoteUsername: tercen
-RemoteSha: c7dd0c4c3a6d1bef1f1c4cd1724d3c647432b078
+RemoteSha: a31ea3cd5cf902ed392e7d10aa07cabf2e952723
 
 Package: packrat
 Source: github
@@ -77,6 +77,10 @@ GithubRepo: packrat
 GithubUsername: rstudio
 GithubRef: v0.4.9-1
 GithubSha1: f98789177c02b3066144dfb8c39ea67d681fd73c
+RemoteHost: api.github.com
+RemoteRepo: packrat
+RemoteUsername: rstudio
+RemoteSha: f98789177c02b3066144dfb8c39ea67d681fd73c
 
 Package: pillar
 Source: CRAN
@@ -107,30 +111,30 @@ Hash: 6a5220d1a973463418286038095d8c0b
 
 Package: teRcenHttp
 Source: github
-Version: 1.0.6
-Hash: 1fb2f3fa4c2f7975cc30244adede3a43
+Version: 1.0.8
+Hash: c7cc4bc210b88b0f84d1d5ea43f5b294
 GithubRepo: teRcenHttp
 GithubUsername: tercen
-GithubRef: 1.0.6
-GithubSha1: 94cc13e3d89e159d0a897c9a66fa38fc52136fb6
+GithubRef: 1.0.8
+GithubSha1: 2da87908a5eb66edfbd17f6faf88c44e0f96990d
 RemoteHost: api.github.com
 RemoteRepo: teRcenHttp
 RemoteUsername: tercen
-RemoteSha: 94cc13e3d89e159d0a897c9a66fa38fc52136fb6
+RemoteSha: 2da87908a5eb66edfbd17f6faf88c44e0f96990d
 
 Package: tercen
 Source: github
-Version: 0.8.12
-Hash: e257ec12ff00765da8a0b6537725cb90
+Version: 0.8.14
+Hash: 0dd9101aff3332f2172e66bce0afe95b
 Requires: R6, dplyr, mtercen, teRcenHttp, tibble, yaml
 GithubRepo: teRcen
 GithubUsername: tercen
-GithubRef: 0.8.12
-GithubSha1: f2c69def5f6263540dc632bef1d259db30685ff7
+GithubRef: 0.8.14
+GithubSha1: 403da6bf08bc835df4d8b97b3a0f57e51ae4972b
 RemoteHost: api.github.com
 RemoteRepo: teRcen
 RemoteUsername: tercen
-RemoteSha: f2c69def5f6263540dc632bef1d259db30685ff7
+RemoteSha: 403da6bf08bc835df4d8b97b3a0f57e51ae4972b
 
 Package: tibble
 Source: CRAN
